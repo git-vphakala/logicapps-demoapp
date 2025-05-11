@@ -46,3 +46,13 @@ jobs:
           az functionapp sync-function-triggers \
             --name $APP_NAME \
             --resource-group $RG_NAME
+      - name: Install Azure Logic extension
+        run: |
+          az extension add --name logic --yes || az extension update --name logic
+
+      - name: Sync Logic App workflow triggers
+        run: |
+          az logic workflow sync \
+            --resource-group $RG_NAME \
+            --name Stateful1 \
+            --app-name $APP_NAME
