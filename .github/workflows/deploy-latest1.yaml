@@ -41,11 +41,6 @@ jobs:
             --name $APP_NAME \
             --src logicapp.zip
 
-      - name: Sync Logic App triggers
-        run: |
-          az functionapp sync-function-triggers \
-            --name $APP_NAME \
-            --resource-group $RG_NAME
       - name: Install Azure Logic extension
         run: |
           az extension add --name logic --yes || az extension update --name logic
