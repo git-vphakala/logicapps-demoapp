@@ -40,3 +40,9 @@ jobs:
             --resource-group $RG_NAME \
             --name $APP_NAME \
             --src logicapp.zip
+
+      - name: Sync Logic App triggers
+        run: |
+          az functionapp sync-function-triggers \
+            --name $APP_NAME \
+            --resource-group $RG_NAME
