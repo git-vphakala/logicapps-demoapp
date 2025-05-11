@@ -29,7 +29,7 @@ jobs:
         run: |
           # Variables (replace with your actual resource names)
           RG_NAME="cdk3-rg"
-          APP_NAME="Stateful1"
+          APP_NAME="logicapp-win-std-cdk3"
           ZIP_PATH="."
 
           # Zip the logic app code (must contain workflow.json etc.)
