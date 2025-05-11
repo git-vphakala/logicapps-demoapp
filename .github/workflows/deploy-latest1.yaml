@@ -28,9 +28,9 @@ jobs:
       - name: Deploy Logic App Workflow
         run: |
           # Variables (replace with your actual resource names)
-          RG_NAME="my-resource-group"
-          APP_NAME="my-logicapp-standard"
-          ZIP_PATH="LogicApp"
+          RG_NAME="cdk3-rg"
+          APP_NAME="Stateful1"
+          ZIP_PATH="."
 
           # Zip the logic app code (must contain workflow.json etc.)
           zip -r logicapp.zip $ZIP_PATH
