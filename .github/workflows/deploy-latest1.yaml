@@ -33,7 +33,8 @@ jobs:
           ZIP_PATH="."
 
           # Zip the logic app code (must contain workflow.json etc.)
-          zip -r logicapp.zip $ZIP_PATH
+          # zip -r logicapp.zip $ZIP_PATH
+          zip -r logicapp.zip host.json connections.json Stateful1/
 
           # Deploy using Azure CLI
           az functionapp deployment source config-zip \
