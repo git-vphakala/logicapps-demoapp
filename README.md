@@ -33,3 +33,4 @@ Four first ones need correct values.
 - local.settings.json is not in the repo. Add manually.
 - add Stateles1/ host.json connections.json to the logicapp.zip (Right-click the selection → "Send to Compressed (zipped) folder")
 - az functionapp deployment source config-zip --resource-group <rg-name> --name <logicapp-name> --src logicapp.zip
+- 
